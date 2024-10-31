@@ -20,8 +20,8 @@ This project is a WebdriverIO test automation framework using Cucumber, designed
 
 ### **Clone the repository:**
 ```bash
-git clone https://github.com/your-username/mobile-automation-framework.git
-cd mobile-automation-framework
+git clone https://github.com/shady10494/WebdriverIO-cucumber.git
+cd WebdriverIO-cucumber
 ```
 
 ### **Install the dependencies:**
