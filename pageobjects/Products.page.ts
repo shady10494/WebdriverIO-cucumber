@@ -1,5 +1,7 @@
 class ProductsPage {
-    // Define element locators
+
+  ///////////////////// Define elements ///////////////////////////
+
     get productsLabel() {
         return $('//android.widget.TextView[@text="Products"]');
     }
@@ -8,13 +10,16 @@ class ProductsPage {
         return `//android.widget.TextView[@text="${message}"]`;
     }
 
-    // Define methods for assertions
-    async isProductsPageDisplayed() {
+  ///////////////////// Define methods for assertions ///////////////////////////
+
+  // Verifies if product pages is displayed after successful login
+  async isProductsPageDisplayed() {
         return await this.productsLabel.waitForDisplayed({timeout:5000}).then(async()=> {
             return await this.productsLabel.isDisplayed();
         })
     }
 
+    // Verifies if warning message is displayed after unsucessful login
     async isWarningMessageDisplayed(message : string) {
         return await $(this.getLabelWithMessage(message)).waitForDisplayed({timeout: 5000}).then(async ()=>{
             return await $(this.getLabelWithMessage(message)).isDisplayed();

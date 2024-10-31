@@ -1,5 +1,6 @@
 class SideMenuPage {
-  // Define element locators
+  ///////////////////// Define elements ///////////////////////////
+
   get openMenuButton() {
     return $('//android.view.ViewGroup[@content-desc="open menu"]');
   }
@@ -8,7 +9,9 @@ class SideMenuPage {
     return $('//android.view.ViewGroup[@content-desc="menu item log in"]');
   }
 
-  // Define methods for actions
+  ///////////////////// Define methods for actions ///////////////////////////
+
+  // This method opens side menu and select login option
   async openLoginPage() {
     await this.openMenuButton.waitForDisplayed({ timeout: 5000 });
     await this.openMenuButton.click();

@@ -6,7 +6,7 @@ import {sideMenuPage} from 'pageobjects/SideMenu.page';
 
 
 When('I login with {string} and {string}', async (username, password) => {
-    await loginPage.login(username, password);
+    await loginPage.loginWithUserNameAndPassword(username, password);
 });
 
 Given('I open login page', async () => {
